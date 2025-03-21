@@ -1,0 +1,9 @@
+[submodule "physicsnemo"]
+	path = physicsnemo
+	url = https://github.com/NVIDIA/physicsnemo.git
+[submodule "physicsnemo-sym"]
+	path = physicsnemo-sym
+	url = https://github.com/NVIDIA/physicsnemo-sym.git
+[submodule "pino-applications"]
+	path = pino-applications
+	url = https://github.com/shawnrosofsky/PINO_Applications.git
