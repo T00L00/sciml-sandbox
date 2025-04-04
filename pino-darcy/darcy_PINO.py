@@ -129,8 +129,8 @@ def run(cfg: PhysicsNeMoConfig) -> None:
     # load training/ test data
     input_keys = [
         Key("coeff", scale=(7.48360e00, 4.49996e00)),
-        Key("Kcoeff_x"),
-        Key("Kcoeff_y"),
+        Key("Kcoeff_x"), # x-gradient of the input permeability field?
+        Key("Kcoeff_y"), # y-gradient of the input permeability field?
     ]
     output_keys = [
         Key("sol", scale=(5.74634e-03, 3.88433e-03)),
@@ -154,6 +154,7 @@ def run(cfg: PhysicsNeMoConfig) -> None:
     )
 
     # add additional constraining values for darcy variable
+    # We're aiming for PDE loss to = 0
     outvar_train["darcy"] = np.zeros_like(outvar_train["sol"])
 
     train_dataset = DictGridDataset(invar_train, outvar_train)
