@@ -12,4 +12,4 @@ docker run -it --rm --gpus all \
     --name nvidia-physicsnemo \
     -v "$(pwd)":/sci-ml \
     --shm-size=1g --ulimit memlock=-1 --ulimit stack=67108864 \
-    nvidia-physicsnemo:25.03 bash
+    nvidia-physicsnemo:25.06 bash
